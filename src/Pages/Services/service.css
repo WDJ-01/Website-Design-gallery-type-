@@ -1,0 +1,189 @@
+.services.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.service_hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+#mining::before {    
+    content: "";
+    background-image: url('../../Assets/images/mining/mining1.jpg');
+    background-size: cover;    
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.4;
+}
+#forestry::before {    
+  content: "";
+  background-image: url('../../Assets/images/forestry/forestry1.jpg');
+  background-size: cover;    
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.4;
+}
+#machinery::before {    
+  content: "";
+  background-image: url('../../Assets/images/mining/mining3.jpg');
+  background-size: cover;    
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.4;
+}
+.service_hero_h1 {
+    font-size: 8rem;
+    position: relative;
+    margin-bottom: 0;
+
+}
+.service_hero_p {
+    font-size: 1.25rem;
+    position: relative;
+}
+
+.service_content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.service_content_child{
+    width: 100%;
+    display: flex;
+    align-items: center ;
+
+}
+.service_content_child_content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem;
+
+}
+.service_content_child_img{
+    background-image: url(../../Assets/images/mining/mining4.jpg);
+    width: 431px;
+    height: 296px;
+    background-size: cover;
+    margin: 2rem 2rem 2rem 2rem;
+}
+.service_content_child_content_btn{
+    position: relative;
+    background-color: transparent;
+    border: .1rem solid #ffff;
+    color:#ffff;
+    width: 13.75rem;
+    height: 3.875rem;
+    font-size: 1rem;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ a{
+font-weight: bold;
+    text-decoration: none;
+}
+.service_content_child_content_btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #ffff;
+  
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  
+  .service_content_child_content_btn:hover::before,
+  .service_content_child_content_btn:focus::before {
+    transform: scaleX(1);
+  }
+  
+  .service_content_child_content_btn {
+    transition: color 300ms ease-in-out;
+    z-index: 1;
+  }
+  
+  
+  .service_content_child_content_btn:hover,
+  .service_content_child_content_btn:focus {
+    color: black;
+  }
+
+
+
+
+
+
+
+/*down arrow*/
+  .down_arrow{
+      -webkit-animation: fade_move_down 4s ease-in-out infinite;
+      -moz-animation:    fade_move_down 4s ease-in-out infinite;
+      animation:         fade_move_down 4s ease-in-out infinite;
+    }
+    
+    
+    /*animated scroll arrow animation*/
+    @-webkit-keyframes fade_move_down {
+      0%   { -webkit-transform:translate(0,-10px) ; opacity: 0;  }
+      50%  { opacity: 1;  }
+      100% { -webkit-transform:translate(0,10px) ; opacity: 0; }
+    }
+    @-moz-keyframes fade_move_down {
+      0%   { -moz-transform:translate(0,-10px) ; opacity: 0;  }
+      50%  { opacity: 1;  }
+      100% { -moz-transform:translate(0,10px) ; opacity: 0; }
+    }
+    @keyframes fade_move_down {
+      0%   { transform:translate(0,-10px) ; opacity: 0;  }
+      50%  { opacity: 1;  }
+      100% { transform:translate(0,10px) ; opacity: 0; }
+    }
+
+    /*Media Queries*/
+    @media screen and (max-width: 450px) {
+      .service_hero_h1 {
+        font-size: 6rem;
+      }
+    }
+        @media screen and (max-width: 750px) {
+          .service_content_child {
+            flex-direction: column;
+          }
+          #responsive_layout{
+            flex-direction: column-reverse;
+          }
+          .service_content_child_content{
+            width: 100%;
+            padding: 0;
+          }
+          .service_content_child_img{
+            width: 100%;
+          }
+          .service_content_child_content h2, p, a{
+            margin-left: 1rem;
+          }
+        }
